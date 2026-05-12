@@ -1,8 +1,6 @@
 
 # Airretrieve Reservations List Request
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `AirretrieveReservationsListRequest`
@@ -23,7 +21,6 @@
 | `limit` | `number` | Required | - |
 | `offset` | `number` | Required | - |
 | `currency` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -40,11 +37,7 @@
   "traveler_email": "rkaydanowski+hcat@bcdtriptech.com",
   "limit": 10,
   "offset": 11,
-  "currency": "UAH",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "currency": "UAH"
 }
 ```
 

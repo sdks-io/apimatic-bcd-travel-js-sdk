@@ -1,8 +1,6 @@
 
 # Hotelscancel Reservation Request
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `HotelscancelReservationRequest`
@@ -21,7 +19,6 @@
 | `system` | `string` | Required | - |
 | `email` | `string` | Required | - |
 | `bookingUid` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -36,11 +33,7 @@
   "user_agent": "curl/7.64.0",
   "system": "aft",
   "email": "booker@bcdtriptech.com",
-  "booking_uid": "c45ku73jdbjlczjktkdzanpcmi",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "booking_uid": "c45ku73jdbjlczjktkdzanpcmi"
 }
 ```
 

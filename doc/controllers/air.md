@@ -1,27 +1,25 @@
 # Air
 
 ```ts
-const airApi = new AirApi(client);
+const airController = new AirController(client);
 ```
 
 ## Class Name
 
-`AirApi`
+`AirController`
 
 ## Methods
 
-* [Air Destination Lookup ? Api Key ASB API KEY Timestamp Timestamp Nonce Nonce Locale En US Customer Ip 127 0 0 1 Session Id Session Id User Agent Curl 7 64 0 System Aft Configuration Id 4 Term Irpin](../../doc/controllers/air.md#air-destination-lookup-api-key-asb-api-key-timestamp-timestamp-nonce-nonce-locale-en-us-customer-ip-127-0-0-1-session-id-session-id-user-agent-curl-7-64-0-system-aft-configuration-id-4-term-irpin)
-* [Air Documents Issue](../../doc/controllers/air.md#air-documents-issue)
-* [Air Complete Verification](../../doc/controllers/air.md#air-complete-verification)
-* [Air Retrieve Reservations List](../../doc/controllers/air.md#air-retrieve-reservations-list)
+* [Destination Lookup](../../doc/controllers/air.md#destination-lookup)
+* [Documents Issue](../../doc/controllers/air.md#documents-issue)
+* [Complete Verification](../../doc/controllers/air.md#complete-verification)
+* [Retrieve Reservations List](../../doc/controllers/air.md#retrieve-reservations-list)
 
 
-# Air Destination Lookup ? Api Key ASB API KEY Timestamp Timestamp Nonce Nonce Locale En US Customer Ip 127 0 0 1 Session Id Session Id User Agent Curl 7 64 0 System Aft Configuration Id 4 Term Irpin
-
-:information_source: **Note** This endpoint does not require authentication.
+# Destination Lookup
 
 ```ts
-async mAirDestinationLookupApiKeyAsbApiKeyTimestampTimestampNonceNonceLocaleEnUsCustomerIp127001SessionIdSessionIdUserAgentCurl7640SystemAftConfigurationId4TermIrpin(
+async destinationLookup(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -80,7 +78,7 @@ const term = 'lond';
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await airApi.mAirDestinationLookupApiKeyAsbApiKeyTimestampTimestampNonceNonceLocaleEnUsCustomerIp127001SessionIdSessionIdUserAgentCurl7640SystemAftConfigurationId4TermIrpin(
+  const response = await airController.destinationLookup(
     apiKey,
     timestamp,
     nonce,
@@ -115,12 +113,10 @@ try {
 ```
 
 
-# Air Documents Issue
-
-:information_source: **Note** This endpoint does not require authentication.
+# Documents Issue
 
 ```ts
-async mAirDocumentsIssue(
+async documentsIssue(
   authorization: string,
   body: AirdocumentsIssueRequest,
   requestOptions?: RequestOptions
@@ -159,7 +155,7 @@ const body: AirdocumentsIssueRequest = {
 };
 
 try {
-  const response = await airApi.mAirDocumentsIssue(
+  const response = await airController.documentsIssue(
     authorization,
     body
   );
@@ -186,12 +182,10 @@ try {
 ```
 
 
-# Air Complete Verification
-
-:information_source: **Note** This endpoint does not require authentication.
+# Complete Verification
 
 ```ts
-async mAirCompleteVerification(
+async completeVerification(
   authorization: string,
   body: AircompleteVerificationRequest,
   requestOptions?: RequestOptions
@@ -228,7 +222,7 @@ const body: AircompleteVerificationRequest = {
 };
 
 try {
-  const response = await airApi.mAirCompleteVerification(
+  const response = await airController.completeVerification(
     authorization,
     body
   );
@@ -255,12 +249,10 @@ try {
 ```
 
 
-# Air Retrieve Reservations List
-
-:information_source: **Note** This endpoint does not require authentication.
+# Retrieve Reservations List
 
 ```ts
-async mAirRetrieveReservationsList(
+async retrieveReservationsList(
   authorization: string,
   body: AirretrieveReservationsListRequest,
   requestOptions?: RequestOptions
@@ -300,7 +292,7 @@ const body: AirretrieveReservationsListRequest = {
 };
 
 try {
-  const response = await airApi.mAirRetrieveReservationsList(
+  const response = await airController.retrieveReservationsList(
     authorization,
     body
   );

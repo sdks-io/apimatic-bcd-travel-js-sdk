@@ -1,8 +1,6 @@
 
 # Carsbookvoucherrequest
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `Carsbookvoucherrequest`
@@ -32,7 +30,6 @@
 | `paymentMethod` | `string` | Required | - |
 | `billingNumber` | `string` | Required | - |
 | `billingReference` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -58,11 +55,7 @@
   "pnr_id": "NQ86M3",
   "payment_method": "voucher",
   "billing_number": "A123456",
-  "billing_reference": "qwerty",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "billing_reference": "qwerty"
 }
 ```
 

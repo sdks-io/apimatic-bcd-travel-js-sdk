@@ -1,8 +1,6 @@
 
 # Aircancel Reservation Request 4
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `AircancelReservationRequest4`
@@ -22,7 +20,6 @@
 | `email` | `string` | Required | - |
 | `options` | [`Options`](../../doc/models/options.md) | Required | - |
 | `bookingUid` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -39,17 +36,9 @@
   "email": "booker@bcdtriptech.com",
   "options": {
     "request_quote_id": false,
-    "segments_only": false,
-    "exampleAdditionalProperty": {
-      "key1": "val1",
-      "key2": "val2"
-    }
+    "segments_only": false
   },
-  "booking_uid": "6851bd833bae8d89b290c5c0",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "booking_uid": "6851bd833bae8d89b290c5c0"
 }
 ```
 

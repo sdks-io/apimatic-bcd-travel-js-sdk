@@ -1,8 +1,6 @@
 
 # Carsretrieve Reservations List Request
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `CarsretrieveReservationsListRequest`
@@ -23,7 +21,6 @@
 | `limit` | `number` | Required | - |
 | `offset` | `number` | Required | - |
 | `filters` | `unknown` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -40,11 +37,7 @@
   "traveler_email": "traveler@bcdtriptech.com",
   "limit": 20,
   "offset": 0,
-  "filters": {},
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "filters": {}
 }
 ```
 

@@ -1,8 +1,6 @@
 
 # Options
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `Options`
@@ -13,18 +11,13 @@
 |  --- | --- | --- | --- |
 | `requestQuoteId` | `boolean` | Required | - |
 | `segmentsOnly` | `boolean` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
 ```json
 {
   "request_quote_id": false,
-  "segments_only": false,
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "segments_only": false
 }
 ```
 

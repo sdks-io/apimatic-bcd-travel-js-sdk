@@ -1,8 +1,6 @@
 
 # Carsbookguaranteerequest
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `Carsbookguaranteerequest`
@@ -29,7 +27,6 @@
 | `travelerFirstName` | `string` | Required | - |
 | `travelerLastName` | `string` | Required | - |
 | `specialInformation` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -52,11 +49,7 @@
   "traveler_email": "traveler@bcdtriptech.com",
   "traveler_first_name": "TravelerFirst",
   "traveler_last_name": "TravelerLast",
-  "special_information": "some spec info",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "special_information": "some spec info"
 }
 ```
 

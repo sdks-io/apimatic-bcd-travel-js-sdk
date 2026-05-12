@@ -1,8 +1,6 @@
 
 # Airavailabilityrequest
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `Airavailabilityrequest`
@@ -21,7 +19,6 @@
 | `system` | `string` | Required | - |
 | `configurationId` | `number` | Required | - |
 | `originDestinations` | [`OriginDestination[]`](../../doc/models/origin-destination.md) | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -41,28 +38,16 @@
       "departure_date": "2023-09-16",
       "departure_location": {
         "location_code": "LON",
-        "location_type": "city",
-        "exampleAdditionalProperty": {
-          "key1": "val1",
-          "key2": "val2"
-        }
+        "location_type": "city"
       },
       "arrival_location": {
         "location_code": "MUC",
-        "location_type": "city",
-        "exampleAdditionalProperty": {
-          "key1": "val1",
-          "key2": "val2"
-        }
+        "location_type": "city"
       },
       "specific_flights": [
         {
           "airline_code": "BA",
-          "flight_number": "950",
-          "exampleAdditionalProperty": {
-            "key1": "val1",
-            "key2": "val2"
-          }
+          "flight_number": "950"
         }
       ],
       "airline_codes": [
@@ -72,22 +57,10 @@
       "time_restriction": {
         "time": "12:00",
         "time_type": "departure",
-        "time_window": 12,
-        "exampleAdditionalProperty": {
-          "key1": "val1",
-          "key2": "val2"
-        }
-      },
-      "exampleAdditionalProperty": {
-        "key1": "val1",
-        "key2": "val2"
+        "time_window": 12
       }
     }
-  ],
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  ]
 }
 ```
 

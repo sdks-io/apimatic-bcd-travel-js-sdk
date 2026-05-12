@@ -1,8 +1,6 @@
 
 # Aircancel Reservationrefundquoteconfirmrequest
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `AircancelReservationrefundquoteconfirmrequest`
@@ -22,7 +20,6 @@
 | `email` | `string` | Required | - |
 | `refundQuoteId` | `string` | Required | - |
 | `bookingUid` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -38,11 +35,7 @@
   "system": "aft",
   "email": "booker@bcdtriptech.com",
   "refund_quote_id": "insert_quote_id_here",
-  "booking_uid": "63a36d2c2d4d55f488e097c2",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "booking_uid": "63a36d2c2d4d55f488e097c2"
 }
 ```
 

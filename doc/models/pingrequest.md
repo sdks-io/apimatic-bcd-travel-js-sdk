@@ -1,8 +1,6 @@
 
 # Pingrequest
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `Pingrequest`
@@ -18,7 +16,6 @@
 | `customerIp` | `string` | Required | - |
 | `sessionId` | `string` | Required | - |
 | `userAgent` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -30,11 +27,7 @@
   "locale": "en_US",
   "customer_ip": "127.0.0.1",
   "session_id": "{{session_id}}",
-  "user_agent": "curl/7.64.0",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "user_agent": "curl/7.64.0"
 }
 ```
 

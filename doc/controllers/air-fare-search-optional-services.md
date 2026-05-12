@@ -1,20 +1,18 @@
 # Air-Fare-Search-Optional-Services
 
 ```ts
-const airFareSearchOptionalServicesApi = new AirFareSearchOptionalServicesApi(client);
+const airFareSearchOptionalServicesController = new AirFareSearchOptionalServicesController(client);
 ```
 
 ## Class Name
 
-`AirFareSearchOptionalServicesApi`
+`AirFareSearchOptionalServicesController`
 
 
-# Air Get Checkout Data
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Checkout Data
 
 ```ts
-async mAirGetCheckoutData(
+async getCheckoutData(
   authorization: string,
   body: string,
   requestOptions?: RequestOptions
@@ -41,7 +39,7 @@ const authorization = 'Signature {{signature}}';
 const body = '{\n	"api_key": "{{ASB_API_KEY}}",\n	"timestamp": "{{timestamp}}",\n	"nonce": "{{nonce}}",\n	"locale": "en_US",\n	"customer_ip": "127.0.0.1",\n	"session_id": "{{session_id}}",\n	"user_agent": "curl/7.64.0",\n	"system": "aft",\n	\n	"configuration_id": {{configuration_id}},\n    "fare_group_key": "{{fare_group_key}}",\n    "tspm_traveler_id": "{{tspm_traveler_id}}",\n    "tspm_company_id": "{{tspm_company_id}}"\n}';
 
 try {
-  const response = await airFareSearchOptionalServicesApi.mAirGetCheckoutData(
+  const response = await airFareSearchOptionalServicesController.getCheckoutData(
     authorization,
     body
   );

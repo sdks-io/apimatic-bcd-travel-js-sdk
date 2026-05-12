@@ -1,8 +1,6 @@
 
 # Carscancel Reservation Request 1
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `CarscancelReservationRequest1`
@@ -22,7 +20,6 @@
 | `system` | `string` | Required | - |
 | `email` | `string` | Required | - |
 | `bookingUid` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -38,11 +35,7 @@
   "configuration_id": 4,
   "system": "aft",
   "email": "booker@bcdtriptech.com",
-  "booking_uid": "5c867dbbdc8f03103b4daf33",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "booking_uid": "5c867dbbdc8f03103b4daf33"
 }
 ```
 

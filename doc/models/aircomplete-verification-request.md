@@ -1,8 +1,6 @@
 
 # Aircomplete Verification Request
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `AircompleteVerificationRequest`
@@ -20,7 +18,6 @@
 | `userAgent` | `string` | Required | - |
 | `system` | `string` | Required | - |
 | `verificationId` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -34,11 +31,7 @@
   "session_id": "{{session_id}}",
   "user_agent": "curl/7.64.0",
   "system": "aft",
-  "verification_id": "SdclrQ5x8BumYVOXbwmJ5tIYKNG5sUe0unafapdxpasdRfbFdjM40g==",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "verification_id": "SdclrQ5x8BumYVOXbwmJ5tIYKNG5sUe0unafapdxpasdRfbFdjM40g=="
 }
 ```
 

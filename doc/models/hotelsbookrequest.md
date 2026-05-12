@@ -1,8 +1,6 @@
 
 # Hotelsbookrequest
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `Hotelsbookrequest`
@@ -46,7 +44,6 @@
 | `creditCardStateProvinceCode` | `string` | Required | - |
 | `creditCardPostalCode` | `string` | Required | - |
 | `creditCardPhone` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -86,11 +83,7 @@
   "credit_card_city": "Atlanta",
   "credit_card_state_province_code": "GA",
   "credit_card_postal_code": "12345",
-  "credit_card_phone": "1234567890",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "credit_card_phone": "1234567890"
 }
 ```
 

@@ -1,34 +1,150 @@
 # Cars
 
 ```ts
-const carsApi = new CarsApi(client);
+const carsController = new CarsController(client);
 ```
 
 ## Class Name
 
-`CarsApi`
+`CarsController`
 
 ## Methods
 
-* [Cars Get Availability](../../doc/controllers/cars.md#cars-get-availability)
-* [Cars Get Rate Details](../../doc/controllers/cars.md#cars-get-rate-details)
-* [Cars Get Checkout Data](../../doc/controllers/cars.md#cars-get-checkout-data)
-* [Cars Get Direct Sell Checkout Data](../../doc/controllers/cars.md#cars-get-direct-sell-checkout-data)
-* [Cars Book Card](../../doc/controllers/cars.md#cars-book-card)
-* [Cars Modify Reservation](../../doc/controllers/cars.md#cars-modify-reservation)
-* [Cars Direct Sell Book No Payment](../../doc/controllers/cars.md#cars-direct-sell-book-no-payment)
-* [Cars Cancel Reservation](../../doc/controllers/cars.md#cars-cancel-reservation)
-* [Cars Get Reservations List](../../doc/controllers/cars.md#cars-get-reservations-list)
-* [Cars Retrieve Reservations List](../../doc/controllers/cars.md#cars-retrieve-reservations-list)
-* [Cars Get Reservation Details](../../doc/controllers/cars.md#cars-get-reservation-details)
+* [Get Vendor Locations](../../doc/controllers/cars.md#get-vendor-locations)
+* [Get Availability](../../doc/controllers/cars.md#get-availability)
+* [Get Rate Details](../../doc/controllers/cars.md#get-rate-details)
+* [Get Checkout Data](../../doc/controllers/cars.md#get-checkout-data)
+* [Get Direct Sell Checkout Data](../../doc/controllers/cars.md#get-direct-sell-checkout-data)
+* [Book](../../doc/controllers/cars.md#book)
+* [Modify Reservation](../../doc/controllers/cars.md#modify-reservation)
+* [Direct Sell Book](../../doc/controllers/cars.md#direct-sell-book)
+* [Cancel Reservation](../../doc/controllers/cars.md#cancel-reservation)
+* [Get Reservations List](../../doc/controllers/cars.md#get-reservations-list)
+* [Retrieve Reservations List](../../doc/controllers/cars.md#retrieve-reservations-list)
+* [Get Reservation Details](../../doc/controllers/cars.md#get-reservation-details)
 
 
-# Cars Get Availability
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Vendor Locations
 
 ```ts
-async mCarsGetAvailability(
+async getVendorLocations(
+  apiKey: string,
+  timestamp: string,
+  nonce: string,
+  locale: string,
+  customerIp: string,
+  sessionId: string,
+  userAgent: string,
+  system: string,
+  configurationId: number,
+  searchLocation: string,
+  searchRadiusUnit: string,
+  vendorCode: string,
+  limit: number,
+  authorization: string,
+  requestOptions?: RequestOptions
+): Promise<ApiResponse<void>>
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `apiKey` | `string` | Query, Required | - |
+| `timestamp` | `string` | Query, Required | - |
+| `nonce` | `string` | Query, Required | - |
+| `locale` | `string` | Query, Required | - |
+| `customerIp` | `string` | Query, Required | - |
+| `sessionId` | `string` | Query, Required | - |
+| `userAgent` | `string` | Query, Required | - |
+| `system` | `string` | Query, Required | - |
+| `configurationId` | `number` | Query, Required | - |
+| `searchLocation` | `string` | Query, Required | - |
+| `searchRadiusUnit` | `string` | Query, Required | - |
+| `vendorCode` | `string` | Query, Required | - |
+| `limit` | `number` | Query, Required | - |
+| `authorization` | `string` | Header, Required | - |
+| `requestOptions` | `RequestOptions \| undefined` | Optional | Pass additional request options. |
+
+## Response Type
+
+This method returns an [`ApiResponse`](../../doc/api-response.md) instance.
+
+## Example Usage
+
+```ts
+const apiKey = '{{ASB_API_KEY}}';
+
+const timestamp = '{{timestamp}}';
+
+const nonce = '{{nonce}}';
+
+const locale = 'en_US';
+
+const customerIp = '127.0.0.1';
+
+const sessionId = '{{session_id}}';
+
+const userAgent = 'curl/7.64.0';
+
+const system = 'aft';
+
+const configurationId = 28;
+
+const searchLocation = 'LHR';
+
+const searchRadiusUnit = 'KM';
+
+const vendorCode = 'ET';
+
+const limit = 1;
+
+const authorization = 'Signature {{signature}}';
+
+try {
+  const response = await carsController.getVendorLocations(
+    apiKey,
+    timestamp,
+    nonce,
+    locale,
+    customerIp,
+    sessionId,
+    userAgent,
+    system,
+    configurationId,
+    searchLocation,
+    searchRadiusUnit,
+    vendorCode,
+    limit,
+    authorization
+  );
+
+  // Extracting fully parsed response body.
+  console.log(response.result);
+
+  // Extracting response status code.
+  console.log(response.statusCode);
+  // Extracting response headers.
+  console.log(response.headers);
+  // Extracting response body of type `string | Stream`
+  console.log(response.body);
+} catch (error) {
+  if (error instanceof ApiError) {
+    // Extracting response error status code.
+    console.log(error.statusCode);
+    // Extracting response error headers.
+    console.log(error.headers);
+    // Extracting response error body of type `string | Stream`.
+    console.log(error.body);
+  }
+}
+```
+
+
+# Get Availability
+
+```ts
+async getAvailability(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -123,7 +239,7 @@ const vendorCodes = 'EP';
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await carsApi.mCarsGetAvailability(
+  const response = await carsController.getAvailability(
     apiKey,
     timestamp,
     nonce,
@@ -167,12 +283,10 @@ try {
 ```
 
 
-# Cars Get Rate Details
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Rate Details
 
 ```ts
-async mCarsGetRateDetails(
+async getRateDetails(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -235,7 +349,7 @@ const rateKey = 'UWXSTXYeT7BVaZ4AsALgoh23kPmKFhANqGURgd_5dj04315AyfgFcCHFdWUVd4M
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await carsApi.mCarsGetRateDetails(
+  const response = await carsController.getRateDetails(
     apiKey,
     timestamp,
     nonce,
@@ -271,12 +385,10 @@ try {
 ```
 
 
-# Cars Get Checkout Data
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Checkout Data
 
 ```ts
-async mCarsGetCheckoutData(
+async getCheckoutData(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -351,7 +463,7 @@ const tspmCompanyId = 20.001;
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await carsApi.mCarsGetCheckoutData(
+  const response = await carsController.getCheckoutData(
     apiKey,
     timestamp,
     nonce,
@@ -390,12 +502,10 @@ try {
 ```
 
 
-# Cars Get Direct Sell Checkout Data
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Direct Sell Checkout Data
 
 ```ts
-async mCarsGetDirectSellCheckoutData(
+async getDirectSellCheckoutData(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -466,7 +576,7 @@ const vendorCode = 'EP';
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await carsApi.mCarsGetDirectSellCheckoutData(
+  const response = await carsController.getDirectSellCheckoutData(
     apiKey,
     timestamp,
     nonce,
@@ -504,12 +614,10 @@ try {
 ```
 
 
-# Cars Book Card
-
-:information_source: **Note** This endpoint does not require authentication.
+# Book
 
 ```ts
-async mCarsBookCard(
+async book(
   authorization: string,
   body: Carsbookcardrequest,
   requestOptions?: RequestOptions
@@ -562,7 +670,7 @@ const body: Carsbookcardrequest = {
 };
 
 try {
-  const response = await carsApi.mCarsBookCard(
+  const response = await carsController.book(
     authorization,
     body
   );
@@ -589,12 +697,10 @@ try {
 ```
 
 
-# Cars Modify Reservation
-
-:information_source: **Note** This endpoint does not require authentication.
+# Modify Reservation
 
 ```ts
-async mCarsModifyReservation(
+async modifyReservation(
   authorization: string,
   body: CarsmodifyReservationRequest,
   requestOptions?: RequestOptions
@@ -640,7 +746,7 @@ const body: CarsmodifyReservationRequest = {
 };
 
 try {
-  const response = await carsApi.mCarsModifyReservation(
+  const response = await carsController.modifyReservation(
     authorization,
     body
   );
@@ -667,12 +773,10 @@ try {
 ```
 
 
-# Cars Direct Sell Book No Payment
-
-:information_source: **Note** This endpoint does not require authentication.
+# Direct Sell Book
 
 ```ts
-async mCarsDirectSellBookNoPayment(
+async directSellBook(
   authorization: string,
   body: CarsdirectSellBooknoPaymentrequest,
   requestOptions?: RequestOptions
@@ -725,7 +829,7 @@ const body: CarsdirectSellBooknoPaymentrequest = {
 };
 
 try {
-  const response = await carsApi.mCarsDirectSellBookNoPayment(
+  const response = await carsController.directSellBook(
     authorization,
     body
   );
@@ -752,12 +856,10 @@ try {
 ```
 
 
-# Cars Cancel Reservation
-
-:information_source: **Note** This endpoint does not require authentication.
+# Cancel Reservation
 
 ```ts
-async mCarsCancelReservation(
+async cancelReservation(
   authorization: string,
   body: HotelscancelReservationRequest,
   requestOptions?: RequestOptions
@@ -795,7 +897,7 @@ const body: HotelscancelReservationRequest = {
 };
 
 try {
-  const response = await carsApi.mCarsCancelReservation(
+  const response = await carsController.cancelReservation(
     authorization,
     body
   );
@@ -822,12 +924,10 @@ try {
 ```
 
 
-# Cars Get Reservations List
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Reservations List
 
 ```ts
-async mCarsGetReservationsList(
+async getReservationsList(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -890,7 +990,7 @@ const status = 'canceled';
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await carsApi.mCarsGetReservationsList(
+  const response = await carsController.getReservationsList(
     apiKey,
     timestamp,
     nonce,
@@ -926,12 +1026,10 @@ try {
 ```
 
 
-# Cars Retrieve Reservations List
-
-:information_source: **Note** This endpoint does not require authentication.
+# Retrieve Reservations List
 
 ```ts
-async mCarsRetrieveReservationsList(
+async retrieveReservationsList(
   authorization: string,
   body: CarsretrieveReservationsListRequest,
   requestOptions?: RequestOptions
@@ -971,7 +1069,7 @@ const body: CarsretrieveReservationsListRequest = {
 };
 
 try {
-  const response = await carsApi.mCarsRetrieveReservationsList(
+  const response = await carsController.retrieveReservationsList(
     authorization,
     body
   );
@@ -998,12 +1096,10 @@ try {
 ```
 
 
-# Cars Get Reservation Details
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Reservation Details
 
 ```ts
-async mCarsGetReservationDetails(
+async getReservationDetails(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -1062,7 +1158,7 @@ const bookingUid = '5c867dbbdc8f03103b4daf33';
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await carsApi.mCarsGetReservationDetails(
+  const response = await carsController.getReservationDetails(
     apiKey,
     timestamp,
     nonce,

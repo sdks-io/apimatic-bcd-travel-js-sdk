@@ -1,11 +1,9 @@
 
-# Get Configurations Post Request
-
-*This model accepts additional fields of type unknown.*
+# Get Configurations POST Request
 
 ## Structure
 
-`GetConfigurationsPostRequest`
+`GetConfigurationsPOSTRequest`
 
 ## Fields
 
@@ -24,7 +22,6 @@
 | `tspmTravelerId` | `string` | Required | - |
 | `clientReportableData` | [`ClientReportableDatum[]`](../../doc/models/client-reportable-datum.md) | Required | - |
 | `pnrId` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -44,18 +41,10 @@
   "client_reportable_data": [
     {
       "code": "AFT.COMMON.CRD.vip_person",
-      "answer": "ans1",
-      "exampleAdditionalProperty": {
-        "key1": "val1",
-        "key2": "val2"
-      }
+      "answer": "ans1"
     }
   ],
-  "pnr_id": "NQ86M3",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "pnr_id": "NQ86M3"
 }
 ```
 

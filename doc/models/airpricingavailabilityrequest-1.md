@@ -1,8 +1,6 @@
 
 # Airpricingavailabilityrequest 1
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `Airpricingavailabilityrequest1`
@@ -27,7 +25,6 @@
 | `segmentOptions` | [`SegmentOption[]`](../../doc/models/segment-option.md) | Required | - |
 | `fareFamilies` | `boolean` | Required | - |
 | `travelers` | [`Traveler[]`](../../doc/models/traveler.md) | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -54,35 +51,19 @@
   "segment_options": [
     {
       "segment_id_ref": 1,
-      "class_of_service": "G",
-      "exampleAdditionalProperty": {
-        "key1": "val1",
-        "key2": "val2"
-      }
+      "class_of_service": "G"
     },
     {
       "segment_id_ref": 2,
-      "class_of_service": "T",
-      "exampleAdditionalProperty": {
-        "key1": "val1",
-        "key2": "val2"
-      }
+      "class_of_service": "T"
     },
     {
       "segment_id_ref": 3,
-      "class_of_service": "Y",
-      "exampleAdditionalProperty": {
-        "key1": "val1",
-        "key2": "val2"
-      }
+      "class_of_service": "Y"
     },
     {
       "segment_id_ref": 4,
-      "class_of_service": "J",
-      "exampleAdditionalProperty": {
-        "key1": "val1",
-        "key2": "val2"
-      }
+      "class_of_service": "J"
     }
   ],
   "fare_families": false,
@@ -92,23 +73,11 @@
       "ff_numbers": [
         {
           "airline_code": "KL",
-          "ff_number": "222111",
-          "exampleAdditionalProperty": {
-            "key1": "val1",
-            "key2": "val2"
-          }
+          "ff_number": "222111"
         }
-      ],
-      "exampleAdditionalProperty": {
-        "key1": "val1",
-        "key2": "val2"
-      }
+      ]
     }
-  ],
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  ]
 }
 ```
 

@@ -1,8 +1,6 @@
 
 # Carsdirect Sell Bookno Paymentrequest
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `CarsdirectSellBooknoPaymentrequest`
@@ -36,7 +34,6 @@
 | `travelerLastName` | `string` | Required | - |
 | `specialInformation` | `string` | Required | - |
 | `paymentMethod` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -66,11 +63,7 @@
   "traveler_first_name": "TravelerFirst",
   "traveler_last_name": "TravelerLast",
   "special_information": "some spec info",
-  "payment_method": "no_payment",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "payment_method": "no_payment"
 }
 ```
 

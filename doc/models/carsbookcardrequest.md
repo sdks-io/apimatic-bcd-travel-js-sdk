@@ -1,8 +1,6 @@
 
 # Carsbookcardrequest
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `Carsbookcardrequest`
@@ -36,7 +34,6 @@
 | `creditCardExpirationMonth` | `string` | Required | - |
 | `creditCardFirstName` | `string` | Required | - |
 | `creditCardLastName` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -66,11 +63,7 @@
   "credit_card_expiration_year": "2020",
   "credit_card_expiration_month": "12",
   "credit_card_first_name": "CCFirst",
-  "credit_card_last_name": "CCLast",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "credit_card_last_name": "CCLast"
 }
 ```
 

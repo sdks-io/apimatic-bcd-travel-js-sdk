@@ -1,8 +1,6 @@
 
 # Hotelsupdate Reservation Details Request 1
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `HotelsupdateReservationDetailsRequest1`
@@ -22,7 +20,6 @@
 | `system` | `string` | Required | - |
 | `bookingUid` | `string` | Required | - |
 | `bookingData` | [`BookingData`](../../doc/models/booking-data.md) | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -39,15 +36,7 @@
   "system": "aft",
   "booking_uid": "dc2ee73lfjykj4zliaqlm5xix",
   "booking_data": {
-    "is_ghost": false,
-    "exampleAdditionalProperty": {
-      "key1": "val1",
-      "key2": "val2"
-    }
-  },
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
+    "is_ghost": false
   }
 }
 ```

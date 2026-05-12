@@ -1,8 +1,6 @@
 
 # Airseat Map Request
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `AirseatMapRequest`
@@ -23,7 +21,6 @@
 | `fareGroupKey` | `string` | Required | - |
 | `flightOptionKeys` | `string[]` | Required | - |
 | `traveler` | [`Traveler3`](../../doc/models/traveler-3.md) | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -47,37 +44,17 @@
     "ff_numbers": [
       {
         "airline_code": "DI",
-        "ff_number": "222222",
-        "exampleAdditionalProperty": {
-          "key1": "val1",
-          "key2": "val2"
-        }
+        "ff_number": "222222"
       },
       {
         "airline_code": "KL",
-        "ff_number": "333333",
-        "exampleAdditionalProperty": {
-          "key1": "val1",
-          "key2": "val2"
-        }
+        "ff_number": "333333"
       }
     ],
     "traveler_name": {
       "first_name": "Darth",
-      "last_name": "Vader",
-      "exampleAdditionalProperty": {
-        "key1": "val1",
-        "key2": "val2"
-      }
-    },
-    "exampleAdditionalProperty": {
-      "key1": "val1",
-      "key2": "val2"
+      "last_name": "Vader"
     }
-  },
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
   }
 }
 ```

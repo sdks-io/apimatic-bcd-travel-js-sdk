@@ -1,25 +1,23 @@
 # Air-Fare-Search-Select-Seat
 
 ```ts
-const airFareSearchSelectSeatApi = new AirFareSearchSelectSeatApi(client);
+const airFareSearchSelectSeatController = new AirFareSearchSelectSeatController(client);
 ```
 
 ## Class Name
 
-`AirFareSearchSelectSeatApi`
+`AirFareSearchSelectSeatController`
 
 ## Methods
 
-* [Air Fare Rules](../../doc/controllers/air-fare-search-select-seat.md#air-fare-rules)
-* [Air Seat Map](../../doc/controllers/air-fare-search-select-seat.md#air-seat-map)
+* [Fare Rules](../../doc/controllers/air-fare-search-select-seat.md#fare-rules)
+* [Seat Map](../../doc/controllers/air-fare-search-select-seat.md#seat-map)
 
 
-# Air Fare Rules
-
-:information_source: **Note** This endpoint does not require authentication.
+# Fare Rules
 
 ```ts
-async mAirFareRules(
+async fareRules(
   authorization: string,
   body: string,
   requestOptions?: RequestOptions
@@ -46,7 +44,7 @@ const authorization = 'Signature {{signature}}';
 const body = '{\n	"api_key": "{{ASB_API_KEY}}",\n	"timestamp": "{{timestamp}}",\n	"nonce": "{{nonce}}",\n	"locale": "en_US",\n	"customer_ip": "127.0.0.1",\n	"session_id": "{{session_id}}",\n	"user_agent": "curl/7.64.0",\n	"system": "aft",\n	"configuration_id": {{configuration_id}},\n	"fare_group_key": "{{fare_group_key}}"\n}';
 
 try {
-  const response = await airFareSearchSelectSeatApi.mAirFareRules(
+  const response = await airFareSearchSelectSeatController.fareRules(
     authorization,
     body
   );
@@ -73,12 +71,10 @@ try {
 ```
 
 
-# Air Seat Map
-
-:information_source: **Note** This endpoint does not require authentication.
+# Seat Map
 
 ```ts
-async mAirSeatMap(
+async seatMap(
   authorization: string,
   body: string,
   requestOptions?: RequestOptions
@@ -105,7 +101,7 @@ const authorization = 'Signature {{signature}}';
 const body = '{\n	"api_key": "{{ASB_API_KEY}}",\n	"timestamp": "{{timestamp}}",\n	"nonce": "{{nonce}}",\n	"locale": "en_US",\n	"customer_ip": "127.0.0.1",\n	"session_id": "{{session_id}}",\n	"user_agent": "curl/7.64.0",\n	"system": "aft",\n	\n	"configuration_id": {{configuration_id}},	\n	"fare_group_key": "{{fare_group_key}}",\n    "flight_option_keys": [\n        "{{flight_option_key_1}}"\n    ],\n	"traveler": {\n		"traveler_name": {\n			"first_name": "{{traveler_first_name}}",\n		    "last_name": "{{traveler_last_name}}"\n		}\n	}\n}';
 
 try {
-  const response = await airFareSearchSelectSeatApi.mAirSeatMap(
+  const response = await airFareSearchSelectSeatController.seatMap(
     authorization,
     body
   );

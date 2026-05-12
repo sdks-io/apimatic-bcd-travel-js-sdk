@@ -1,8 +1,6 @@
 
 # Hotelsrebookrequest
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `Hotelsrebookrequest`
@@ -27,7 +25,6 @@
 | `bookerEmail` | `string` | Required | - |
 | `bookerFirstName` | `string` | Required | - |
 | `bookerLastName` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -48,11 +45,7 @@
   "rate_key": "eJxNjMtOwzAURPf9ivsBTWubvDq768SKrSaxFTtFsKtEFyBYQf8fp2yY1TyORgmlCtEWTzIJCVWhqg+lapVsgRKomrJtT4C1eGgArl/Xt9v9e+uCHWtZAWHxAIuSRQ6DPANKKFmIppDyn1eAtv0+0/vX+nFo1gVYYw/IU3PYgD993D/fbz/5k5li4hfiuafIF7OTdHbzQJPXbnQpD11nYnR6NPR8JM3JplXvOj8Fso5iMKYnNyezzCbRkTiETLrAW0uL99MvQXY/vQ==",
   "booker_email": "booker@bcdtriptech.com",
   "booker_first_name": "BookerFirst",
-  "booker_last_name": "BookerLast",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "booker_last_name": "BookerLast"
 }
 ```
 

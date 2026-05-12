@@ -1,8 +1,6 @@
 
 # Time Restriction
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `TimeRestriction`
@@ -14,7 +12,6 @@
 | `time` | `string` | Required | - |
 | `timeType` | `string` | Required | - |
 | `timeWindow` | `number` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -22,11 +19,7 @@
 {
   "time": "12:00",
   "time_type": "departure",
-  "time_window": 12,
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "time_window": 12
 }
 ```
 

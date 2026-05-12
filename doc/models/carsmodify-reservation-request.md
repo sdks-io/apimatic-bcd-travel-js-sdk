@@ -1,8 +1,6 @@
 
 # Carsmodify Reservation Request
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `CarsmodifyReservationRequest`
@@ -27,7 +25,6 @@
 | `pickupDatetime` | `string` | Required | - |
 | `dropoffDatetime` | `string` | Required | - |
 | `carType` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -50,11 +47,7 @@
   "special_information": "I want a blue car",
   "pickup_datetime": "2019-02-25T11:15",
   "dropoff_datetime": "2019-02-27T10:30",
-  "car_type": "ECAR",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "car_type": "ECAR"
 }
 ```
 

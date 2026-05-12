@@ -1,37 +1,34 @@
 # Hotels
 
 ```ts
-const hotelsApi = new HotelsApi(client);
+const hotelsController = new HotelsController(client);
 ```
 
 ## Class Name
 
-`HotelsApi`
+`HotelsController`
 
 ## Methods
 
-* [Hotels Get List](../../doc/controllers/hotels.md#hotels-get-list)
-* [Hotels Get Detailed Info](../../doc/controllers/hotels.md#hotels-get-detailed-info)
-* [Hotels Get Availability](../../doc/controllers/hotels.md#hotels-get-availability)
-* [Hotels Get Rates](../../doc/controllers/hotels.md#hotels-get-rates)
-* [Hotels Get Rate Details](../../doc/controllers/hotels.md#hotels-get-rate-details)
-* [Hotels Get Recommended Rate](../../doc/controllers/hotels.md#hotels-get-recommended-rate)
-* [Hotels Get Checkout Data](../../doc/controllers/hotels.md#hotels-get-checkout-data)
-* [Hotels Book](../../doc/controllers/hotels.md#hotels-book)
-* [Hotels Rebook](../../doc/controllers/hotels.md#hotels-rebook)
-* [Hotels Cancel Reservation](../../doc/controllers/hotels.md#hotels-cancel-reservation)
-* [Hotels Update Reservation Details](../../doc/controllers/hotels.md#hotels-update-reservation-details)
-* [Hotels Get Reservations List](../../doc/controllers/hotels.md#hotels-get-reservations-list)
-* [Hotels Get Reservation Details](../../doc/controllers/hotels.md#hotels-get-reservation-details)
-* [Cars Get Vendor Locations Byiata](../../doc/controllers/hotels.md#cars-get-vendor-locations-byiata)
+* [Get List](../../doc/controllers/hotels.md#get-list)
+* [Get Detailed Info](../../doc/controllers/hotels.md#get-detailed-info)
+* [Get Availability](../../doc/controllers/hotels.md#get-availability)
+* [Get Rates](../../doc/controllers/hotels.md#get-rates)
+* [Get Rate Details](../../doc/controllers/hotels.md#get-rate-details)
+* [Get Recommended Rate](../../doc/controllers/hotels.md#get-recommended-rate)
+* [Get Checkout Data](../../doc/controllers/hotels.md#get-checkout-data)
+* [Book](../../doc/controllers/hotels.md#book)
+* [Rebook](../../doc/controllers/hotels.md#rebook)
+* [Cancel Reservation](../../doc/controllers/hotels.md#cancel-reservation)
+* [Update Reservation Details](../../doc/controllers/hotels.md#update-reservation-details)
+* [Get Reservations List](../../doc/controllers/hotels.md#get-reservations-list)
+* [Get Reservation Details](../../doc/controllers/hotels.md#get-reservation-details)
 
 
-# Hotels Get List
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get List
 
 ```ts
-async mHotelsGetList(
+async getList(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -130,7 +127,7 @@ const starRatingFilter = '4,4.5,5';
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await hotelsApi.mHotelsGetList(
+  const response = await hotelsController.getList(
     apiKey,
     timestamp,
     nonce,
@@ -175,12 +172,10 @@ try {
 ```
 
 
-# Hotels Get Detailed Info
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Detailed Info
 
 ```ts
-async mHotelsGetDetailedInfo(
+async getDetailedInfo(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -247,7 +242,7 @@ const hotelId = 574889;
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await hotelsApi.mHotelsGetDetailedInfo(
+  const response = await hotelsController.getDetailedInfo(
     apiKey,
     timestamp,
     nonce,
@@ -284,12 +279,10 @@ try {
 ```
 
 
-# Hotels Get Availability
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Availability
 
 ```ts
-async mHotelsGetAvailability(
+async getAvailability(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -388,7 +381,7 @@ const dontWaitForResults = false;
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await hotelsApi.mHotelsGetAvailability(
+  const response = await hotelsController.getAvailability(
     apiKey,
     timestamp,
     nonce,
@@ -433,12 +426,10 @@ try {
 ```
 
 
-# Hotels Get Rates
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Rates
 
 ```ts
-async mHotelsGetRates(
+async getRates(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -533,7 +524,7 @@ const dontWaitForResults = false;
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await hotelsApi.mHotelsGetRates(
+  const response = await hotelsController.getRates(
     apiKey,
     timestamp,
     nonce,
@@ -577,12 +568,10 @@ try {
 ```
 
 
-# Hotels Get Rate Details
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Rate Details
 
 ```ts
-async mHotelsGetRateDetails(
+async getRateDetails(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -657,7 +646,7 @@ const dateFormatType = 'fr';
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await hotelsApi.mHotelsGetRateDetails(
+  const response = await hotelsController.getRateDetails(
     apiKey,
     timestamp,
     nonce,
@@ -696,12 +685,10 @@ try {
 ```
 
 
-# Hotels Get Recommended Rate
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Recommended Rate
 
 ```ts
-async mHotelsGetRecommendedRate(
+async getRecommendedRate(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -780,7 +767,7 @@ const searchId = '68lkU9QBGOmOLdrI2hlaSl';
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await hotelsApi.mHotelsGetRecommendedRate(
+  const response = await hotelsController.getRecommendedRate(
     apiKey,
     timestamp,
     nonce,
@@ -820,12 +807,10 @@ try {
 ```
 
 
-# Hotels Get Checkout Data
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Checkout Data
 
 ```ts
-async mHotelsGetCheckoutData(
+async getCheckoutData(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -908,7 +893,7 @@ const tspmTravelerId = 24.001;
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await hotelsApi.mHotelsGetCheckoutData(
+  const response = await hotelsController.getCheckoutData(
     apiKey,
     timestamp,
     nonce,
@@ -949,12 +934,10 @@ try {
 ```
 
 
-# Hotels Book
-
-:information_source: **Note** This endpoint does not require authentication.
+# Book
 
 ```ts
-async mHotelsBook(
+async book(
   authorization: string,
   body: Hotelsbookrequest,
   requestOptions?: RequestOptions
@@ -1017,7 +1000,7 @@ const body: Hotelsbookrequest = {
 };
 
 try {
-  const response = await hotelsApi.mHotelsBook(
+  const response = await hotelsController.book(
     authorization,
     body
   );
@@ -1044,12 +1027,10 @@ try {
 ```
 
 
-# Hotels Rebook
-
-:information_source: **Note** This endpoint does not require authentication.
+# Rebook
 
 ```ts
-async mHotelsRebook(
+async rebook(
   authorization: string,
   body: Hotelsrebookrequest,
   requestOptions?: RequestOptions
@@ -1093,7 +1074,7 @@ const body: Hotelsrebookrequest = {
 };
 
 try {
-  const response = await hotelsApi.mHotelsRebook(
+  const response = await hotelsController.rebook(
     authorization,
     body
   );
@@ -1120,12 +1101,10 @@ try {
 ```
 
 
-# Hotels Cancel Reservation
-
-:information_source: **Note** This endpoint does not require authentication.
+# Cancel Reservation
 
 ```ts
-async mHotelsCancelReservation(
+async cancelReservation(
   authorization: string,
   body: HotelscancelReservationRequest,
   requestOptions?: RequestOptions
@@ -1163,7 +1142,7 @@ const body: HotelscancelReservationRequest = {
 };
 
 try {
-  const response = await hotelsApi.mHotelsCancelReservation(
+  const response = await hotelsController.cancelReservation(
     authorization,
     body
   );
@@ -1190,12 +1169,10 @@ try {
 ```
 
 
-# Hotels Update Reservation Details
-
-:information_source: **Note** This endpoint does not require authentication.
+# Update Reservation Details
 
 ```ts
-async mHotelsUpdateReservationDetails(
+async updateReservationDetails(
   authorization: string,
   body: HotelsupdateReservationDetailsRequest,
   requestOptions?: RequestOptions
@@ -1235,7 +1212,7 @@ const body: HotelsupdateReservationDetailsRequest = {
 };
 
 try {
-  const response = await hotelsApi.mHotelsUpdateReservationDetails(
+  const response = await hotelsController.updateReservationDetails(
     authorization,
     body
   );
@@ -1262,12 +1239,10 @@ try {
 ```
 
 
-# Hotels Get Reservations List
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Reservations List
 
 ```ts
-async mHotelsGetReservationsList(
+async getReservationsList(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -1334,7 +1309,7 @@ const status = 'canceled';
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await hotelsApi.mHotelsGetReservationsList(
+  const response = await hotelsController.getReservationsList(
     apiKey,
     timestamp,
     nonce,
@@ -1371,12 +1346,10 @@ try {
 ```
 
 
-# Hotels Get Reservation Details
-
-:information_source: **Note** This endpoint does not require authentication.
+# Get Reservation Details
 
 ```ts
-async mHotelsGetReservationDetails(
+async getReservationDetails(
   apiKey: string,
   timestamp: string,
   nonce: string,
@@ -1439,7 +1412,7 @@ const bookingUid = 'c45ku73jdbjlczjktkdzanpcmi';
 const authorization = 'Signature {{signature}}';
 
 try {
-  const response = await hotelsApi.mHotelsGetReservationDetails(
+  const response = await hotelsController.getReservationDetails(
     apiKey,
     timestamp,
     nonce,
@@ -1450,125 +1423,6 @@ try {
     system,
     travelerEmail,
     bookingUid,
-    authorization
-  );
-
-  // Extracting fully parsed response body.
-  console.log(response.result);
-
-  // Extracting response status code.
-  console.log(response.statusCode);
-  // Extracting response headers.
-  console.log(response.headers);
-  // Extracting response body of type `string | Stream`
-  console.log(response.body);
-} catch (error) {
-  if (error instanceof ApiError) {
-    // Extracting response error status code.
-    console.log(error.statusCode);
-    // Extracting response error headers.
-    console.log(error.headers);
-    // Extracting response error body of type `string | Stream`.
-    console.log(error.body);
-  }
-}
-```
-
-
-# Cars Get Vendor Locations Byiata
-
-:information_source: **Note** This endpoint does not require authentication.
-
-```ts
-async mCarsGetVendorLocationsByiata(
-  apiKey: string,
-  timestamp: string,
-  nonce: string,
-  locale: string,
-  customerIp: string,
-  sessionId: string,
-  userAgent: string,
-  system: string,
-  configurationId: number,
-  searchLocation: string,
-  searchRadiusUnit: string,
-  vendorCode: string,
-  limit: number,
-  authorization: string,
-  requestOptions?: RequestOptions
-): Promise<ApiResponse<void>>
-```
-
-## Parameters
-
-| Parameter | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `apiKey` | `string` | Query, Required | - |
-| `timestamp` | `string` | Query, Required | - |
-| `nonce` | `string` | Query, Required | - |
-| `locale` | `string` | Query, Required | - |
-| `customerIp` | `string` | Query, Required | - |
-| `sessionId` | `string` | Query, Required | - |
-| `userAgent` | `string` | Query, Required | - |
-| `system` | `string` | Query, Required | - |
-| `configurationId` | `number` | Query, Required | - |
-| `searchLocation` | `string` | Query, Required | - |
-| `searchRadiusUnit` | `string` | Query, Required | - |
-| `vendorCode` | `string` | Query, Required | - |
-| `limit` | `number` | Query, Required | - |
-| `authorization` | `string` | Header, Required | - |
-| `requestOptions` | `RequestOptions \| undefined` | Optional | Pass additional request options. |
-
-## Response Type
-
-This method returns an [`ApiResponse`](../../doc/api-response.md) instance.
-
-## Example Usage
-
-```ts
-const apiKey = '{{ASB_API_KEY}}';
-
-const timestamp = '{{timestamp}}';
-
-const nonce = '{{nonce}}';
-
-const locale = 'en_US';
-
-const customerIp = '127.0.0.1';
-
-const sessionId = '{{session_id}}';
-
-const userAgent = 'curl/7.64.0';
-
-const system = 'aft';
-
-const configurationId = 28;
-
-const searchLocation = 'LHR';
-
-const searchRadiusUnit = 'KM';
-
-const vendorCode = 'ET';
-
-const limit = 1;
-
-const authorization = 'Signature {{signature}}';
-
-try {
-  const response = await hotelsApi.mCarsGetVendorLocationsByiata(
-    apiKey,
-    timestamp,
-    nonce,
-    locale,
-    customerIp,
-    sessionId,
-    userAgent,
-    system,
-    configurationId,
-    searchLocation,
-    searchRadiusUnit,
-    vendorCode,
-    limit,
     authorization
   );
 

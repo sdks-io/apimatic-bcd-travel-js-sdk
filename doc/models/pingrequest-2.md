@@ -1,8 +1,6 @@
 
 # Pingrequest 2
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `Pingrequest2`
@@ -20,7 +18,6 @@
 | `userAgent` | `string` | Required | - |
 | `configurationId` | `number` | Required | - |
 | `system` | `string` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -34,11 +31,7 @@
   "session_id": "{{session_id}}",
   "user_agent": "curl/7.64.0",
   "configuration_id": 4,
-  "system": "aft",
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "system": "aft"
 }
 ```
 

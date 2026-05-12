@@ -1,8 +1,6 @@
 
 # Airdocuments Issue Request
 
-*This model accepts additional fields of type unknown.*
-
 ## Structure
 
 `AirdocumentsIssueRequest`
@@ -22,7 +20,6 @@
 | `bookingUid` | `string` | Required | - |
 | `issueTickets` | `boolean` | Required | - |
 | `issueEmds` | `boolean` | Required | - |
-| `additionalProperties` | `Record<string, unknown>` | Optional | - |
 
 ## Example (as JSON)
 
@@ -38,11 +35,7 @@
   "system": "aft",
   "booking_uid": "63a36d2c2d4d55f488e097c2",
   "issue_tickets": true,
-  "issue_emds": true,
-  "exampleAdditionalProperty": {
-    "key1": "val1",
-    "key2": "val2"
-  }
+  "issue_emds": true
 }
 ```
 
